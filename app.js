@@ -3,51 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
       {
         name: 'bird',
-        img: 'imgs/bird.png'
+        img: './imgs/bird.png'
       },
       {
         name: 'bowling-ball',
-        img: 'imgs/bowling-ball.jpg'
+        img: './imgs/bowling-ball.jpg'
       },
       {
         name: 'dragon',
-        img: 'imgs/dragon.png'
+        img: './imgs/dragon.png'
       },
       {
         name: 'flame',
-        img: 'imgs/flame.png'
+        img: './imgs/flame.png'
       },
       {
         name: 'panda',
-        img: 'imgs/panda.jpg'
+        img: './imgs/panda.jpg'
       },
       {
         name: 'sword',
-        img: 'imgs/sword.png'
+        img: './imgs/sword.png'
       },
       {
         name: 'bird',
-        img: 'imgs/bird.png'
+        img: './imgs/bird.png'
       },
       {
         name: 'bowling-ball',
-        img: 'imgs/bowling-ball.jpg'
+        img: './imgs/bowling-ball.jpg'
       },
       {
         name: 'dragon',
-        img: 'imgs/dragon.png'
+        img: './imgs/dragon.png'
       },
       {
         name: 'flame',
-        img: 'imgs/flame.png'
+        img: './imgs/flame.png'
       },
       {
         name: 'panda',
-        img: 'imgs/panda.jpg'
+        img: './imgs/panda.jpg'
       },
       {
         name: 'sword',
-        img: 'imgs/sword.png'
+        img: './imgs/sword.png'
       }
     ]
   
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard() {
       for (let i = 0; i < cardArray.length; i++) {
         const card = document.createElement('img')
-        card.setAttribute('src', '/imgs/blank.jpg')
+        card.setAttribute('src', './imgs/blank.jpg')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         grid.appendChild(card)
@@ -77,20 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const optionTwoId = cardsChosenId[1]
       
       if(optionOneId == optionTwoId) {
-        cards[optionOneId].setAttribute('src', '/imgs/blank.jpg')
-        cards[optionTwoId].setAttribute('src', '/imgs/blank.jpg')
+        cards[optionOneId].setAttribute('src', './imgs/blank.jpg')
+        cards[optionTwoId].setAttribute('src', './imgs/blank.jpg')
         alert('You have clicked the same image!')
       }
       else if (cardsChosen[0] === cardsChosen[1]) {
         alert('You found a match')
-        cards[optionOneId].setAttribute('src', '/imgs/white.png')
-        cards[optionTwoId].setAttribute('src', '/imgs/white.png')
+        cards[optionOneId].setAttribute('src', './imgs/white.png')
+        cards[optionTwoId].setAttribute('src', './imgs/white.png')
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
       } else {
-        cards[optionOneId].setAttribute('src', '/imgs/blank.jpg')
-        cards[optionTwoId].setAttribute('src', '/imgs/blank.jpg')
+        cards[optionOneId].setAttribute('src', './imgs/blank.jpg')
+        cards[optionTwoId].setAttribute('src', './imgs/blank.jpg')
         alert('Sorry, try again')
       }
       cardsChosen = []
